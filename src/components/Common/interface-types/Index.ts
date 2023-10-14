@@ -14,3 +14,17 @@ export interface CommonInputWithLabelProps {
   type?: string; // Optional, with a default value
   placeholder?: string; // Optional, with a default value
 }
+export interface CommonFilterProps {
+  content: {
+    title: string;
+    options: any; // Replace 'any' with the actual type of 'options'
+  };
+}
+
+export interface ProfileTitleProps {
+  title: string;
+  btn?: {
+    link: string;
+    text: string;
+  };
+}
