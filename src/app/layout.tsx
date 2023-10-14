@@ -1,6 +1,7 @@
 import Footer from "@/components/Common/Layout/Footer";
 import Header from "@/components/Common/Layout/Header";
-import type { Metadata } from "next";
+import { Providers } from "@/redux/Providers";
+import { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
