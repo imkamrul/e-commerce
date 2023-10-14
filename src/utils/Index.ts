@@ -21,9 +21,9 @@ export const isValidImage = (image: any, fileSize = 5.1) => {
   }
   return [isValid, warningMessage];
 };
+const phoneRegex = /^01[3-9]\d{8}$/;
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 export const isValidPhoneEmail = (value: string) => {
-  const phoneRegex = /^01[3-9]\d{8}$/;
-  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   let isValid = null;
   let warningMessage = null;
   if (value) {
@@ -44,12 +44,11 @@ export const isValidPhoneEmail = (value: string) => {
   return [isValid, warningMessage];
 };
 export const isStrongPassword = (password: string) => {
-  const lengthRegex = /.{8,}/; // Minimum length of 8 characters
-  const lowercaseRegex = /[a-z]/; // At least one lowercase letter
-  const uppercaseRegex = /[A-Z]/; // At least one uppercase letter
-  const digitRegex = /\d/; // At least one digit
-  const specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/; // At least one special character (customize this set)
-
+  const lengthRegex = /.{8,}/;
+  const lowercaseRegex = /[a-z]/;
+  const uppercaseRegex = /[A-Z]/;
+  const digitRegex = /\d/;
+  const specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
   let isValid = null;
   let warningMessage = null;
 
@@ -66,6 +65,63 @@ export const isStrongPassword = (password: string) => {
     isValid = false;
     warningMessage =
       "Password requirements: 8 characters, lowercase, uppercase, digit, special character. Your password doesn't meet the criteria.";
+  }
+
+  return [isValid, warningMessage];
+};
+
+export const isValidEmail = (value: string) => {
+  let isValid = null;
+  let warningMessage = null;
+  if (value) {
+    if (emailRegex.test(value)) {
+      isValid = true;
+      warningMessage = null;
+    } else {
+      isValid = false;
+      warningMessage = "Enter a Valid Email Address";
+    }
+  } else {
+    isValid = false;
+    warningMessage = "Enter Your Email Address";
+  }
+  return [isValid, warningMessage];
+};
+export const isValidPhone = (value: string) => {
+  let isValid = null;
+  let warningMessage = null;
+  if (value) {
+    if (phoneRegex.test(value)) {
+      isValid = true;
+      warningMessage = null;
+    } else {
+      isValid = false;
+      warningMessage = "Enter a Valid Phone Number";
+    }
+  } else {
+    isValid = false;
+    warningMessage = "Enter Your Phone Number";
+  }
+  return [isValid, warningMessage];
+};
+
+export const isValidFullName = (value: string) => {
+  const fullNameRegex = /^[A-Za-z\s\-']+(\.[A-Za-z\s\-']+)?$/;
+
+  let isValid = null;
+  let warningMessage = null;
+
+  if (value) {
+    if (fullNameRegex.test(value)) {
+      isValid = true;
+      warningMessage = null;
+    } else {
+      isValid = false;
+      warningMessage = "Enter a Valid Full Name";
+    }
+  } else {
+    isValid = false;
+    warningMessage = "Enter Your Full Name";
   }
 
   return [isValid, warningMessage];

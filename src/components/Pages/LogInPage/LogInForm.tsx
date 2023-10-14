@@ -9,7 +9,7 @@ const LogInForm = () => {
     password: null,
     emailPhone: null,
   });
-  console.log("logInData :", logInData);
+
   const handleLogIn = (e: any) => {
     e.preventDefault();
 
@@ -27,8 +27,6 @@ const LogInForm = () => {
       setErrorMessage({ ...errorMessage, password: passwordError });
       return;
     }
-    console.log("isValidEmailPhone :", isValidEmailPhone, emailPhoneError);
-    console.log("isValidPassword :", isValidPassword, passwordError);
     console.log("logInData :", logInData);
   };
   return (
