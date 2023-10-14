@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 export interface ModalProps {
   children: React.ReactNode;
   title: string;
@@ -27,4 +29,12 @@ export interface ProfileTitleProps {
     link: string;
     text: string;
   };
+}
+export interface InputWithLabelProps {
+  label: string;
+  name: string;
+  type: string;
+  placeholder: string;
+  errorMessage: string;
+  getValue: (e: ChangeEvent<HTMLInputElement>) => void;
 }

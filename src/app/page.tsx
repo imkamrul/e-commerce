@@ -9,6 +9,7 @@ import HomeSLider from "@/components/Pages/HomePage/HomeSLider";
 import HotDeals from "@/components/Pages/HomePage/HotDeals";
 import LoveMoreProducts from "@/components/Pages/HomePage/LoveMoreProducts";
 import OfferSection from "@/components/Pages/HomePage/OfferSection";
+import Subscribe from "@/components/Pages/HomePage/Subscribe";
 import TopBar from "@/components/Pages/HomePage/TopBar";
 
 const page = () => {
@@ -26,6 +27,7 @@ const page = () => {
       <OfferSectionTwo />
       <DesktopSlider />
       <HomeProduct />
+      <Subscribe />
     </>
   );
 };

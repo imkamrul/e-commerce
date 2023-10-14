@@ -10,7 +10,7 @@ import {
 const Header = () => {
   const upperNavList = [
     { name: "My Account", link: "/profile" },
-    { name: "login", link: "/user/login/" },
+    { name: "login", link: "/user/log-in/" },
     { name: "Featured Products", link: "/all-products" },
     { name: "Contact", link: "/" },
     { name: "Order Tracking", link: "/" },
