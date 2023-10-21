@@ -1,34 +1,41 @@
-import Address from "@/components/Pages/Profile/Address";
-import OrderList from "@/components/Pages/Profile/OrderList";
-import PasswordChange from "@/components/Pages/Profile/PassowordChange";
-import ProfileTitle from "@/components/Pages/Profile/ProfileTitle";
-import ProfileUpdate from "@/components/Pages/Profile/ProfileUpdate";
-import SingleOrder from "@/components/Pages/Profile/SingleOrder";
+"use client";
+import { MyProfileTabList } from "@/components/Common/Constant/Constant";
+import UserPasswordChange from "@/components/Pages/Profile/PasswordChange";
+import PersonalInformation from "@/components/Pages/Profile/PersonalInformation";
 import UserInfo from "@/components/Pages/Profile/UserInfo";
+import UserOrder from "@/components/Pages/Profile/UserOrder";
+import UserProducts from "@/components/Pages/Profile/UserProducts";
+import { useState } from "react";
 
 const Page = () => {
+  const [current, setCurrent] = useState(MyProfileTabList[0]);
   return (
     <>
       <section className="container flex flex-warp py-[70px]">
         <div className="w-3/12">
-          <UserInfo />
+          <UserInfo setCurrent={setCurrent} current={current} />
         </div>
         <div className="w-9/12 pl-6">
-          <ProfileTitle
-            title="Address Book"
-            btn={{ link: "/", text: "Edit" }}
-          />
-          <Address />
-          <ProfileTitle
-            title="Recent Orders"
-            btn={{ link: "/", text: "View All" }}
-          />
-          <OrderList />
-          <SingleOrder />
-          <ProfileTitle title="Edit Personal Information" />
-          <ProfileUpdate />
-          <ProfileTitle title="Password Change" />
-          <PasswordChange />
+          {MyProfileTabList[0] === current && (
+            <>
+              <PersonalInformation />
+            </>
+          )}
+          {MyProfileTabList[1] === current && (
+            <>
+              <UserPasswordChange />
+            </>
+          )}
+          {MyProfileTabList[2] === current && (
+            <>
+              <UserProducts />
+            </>
+          )}
+          {MyProfileTabList[3] === current && (
+            <>
+              <UserOrder />
+            </>
+          )}
         </div>
       </section>
     </>

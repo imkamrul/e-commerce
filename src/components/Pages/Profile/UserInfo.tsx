@@ -1,17 +1,11 @@
 "use client";
+import { MyProfileTabList } from "@/components/Common/Constant/Constant";
+import React from "react";
 
-import { useState } from "react";
-
-const UserInfo = () => {
-  const options = [
-    "Manage My Account",
-    "Personal Information",
-    "My Orders",
-    "My Reviews",
-
-    "Logout",
-  ];
-  const [current, setCurrent] = useState(options[0]);
+const UserInfo: React.FC<{
+  setCurrent: (item: string) => void;
+  current: string;
+}> = ({ setCurrent, current }) => {
   return (
     <>
       <div className="bg-white rounded p-[15px] w-full ">
@@ -28,12 +22,9 @@ const UserInfo = () => {
             kamrul@gmail.com
           </p>
           <p className="text-[#303030] text-base font-medium">01830663091</p>
-          <button className="text-[#2052C8] text-[12px] bg-[#CADAFF] py-[7px] px-[22px] rounded-[19px] mt-2 transform transition-transform hover:scale-105 font-medium">
-            Edit
-          </button>
         </div>
         <div className="flex flex-col justify-center items-start gap-y-[3px] pt-10">
-          {options?.map((item) => {
+          {MyProfileTabList?.map((item) => {
             return (
               <p
                 onClick={() => setCurrent(item)}

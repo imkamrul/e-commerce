@@ -169,33 +169,7 @@ const ProfileUpdate = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col pt-5">
-        <p className="text-[#484242] text-sm font-bold">
-          Do you want to add default shipping address{" "}
-        </p>
-        <div className="flex pt-3">
-          <div className="w-1/2 flex flex-col gap-y-2 pr-5">
-            <CommonInputWithLabel
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="Input Full Name"
-              label="Shipping"
-            />
-          </div>
-          <div className="w-1/2 flex flex-col gap-y-2 pl-5">
-            <CommonInputWithLabel
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="Input Full Name"
-              label="Shipping"
-            />
-          </div>
-        </div>
-      </div>
+
       <div className="flex justify-end pt-5">
         <button className="bg-[#CD2027] text-white text-sm font-medium rounded-[5px] px-[50px] py-[13px]">
           Save Changes
