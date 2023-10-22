@@ -34,15 +34,15 @@ const Footer = () => {
             <div className="w-4/12 pr-4">
               <p className=" text-[22px] font-semibold pb-3">About Us</p>
               <p className=" text-sm pb-3">
-                Training centre. Ltd. Company Number 10647280, England and
-                Wales, VAT No. GB-267018794
+                E-Commerce. Ltd. Company Number 10647280, England and Wales, VAT
+                No. GB-234567
               </p>
               <p className="text-sm pb-3 flex items-center gap-x-2">
                 <Phone />
-                <span>020 3900 4072</span>
+                <span>020 3900 4532</span>
               </p>
               <p className="text-sm pb-3 flex items-center gap-x-2">
-                <Message /> <span> trainingcentre.org</span>
+                <Message /> <span> E-Commerce@web.com</span>
               </p>
               <p className="text-sm  flex items-center gap-x-2">
                 <Location />{" "}
@@ -87,7 +87,7 @@ const Footer = () => {
                 ))}
               </div>
               <p className="text-xl font-semibold  pt-[55px] pb-[20px]">
-                Certificate Validation
+                Newsletter
               </p>
               <div className="flex ">
                 <input
@@ -95,8 +95,8 @@ const Footer = () => {
                   placeholder="Enter your email"
                   className="bg-white w-8/12 border-[1px] border-[#00000012] rounded-l-[8px] py-[14px] pl-3 focus:outline-[1px] focus:outline-[#00000012]  "
                 />
-                <button className="bg-[#F5AA40] rounded-r-[8px] w-4/12 text-white text-xs">
-                  Validate
+                <button className="bg-[#ea4c89] rounded-r-[8px] w-4/12 text-white text-xs">
+                  Subscribe
                 </button>
               </div>
             </div>

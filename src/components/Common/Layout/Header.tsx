@@ -19,7 +19,7 @@ const Header = () => {
   ];
   return (
     <>
-      <header className="bg-[#192D4D] text-[#FFFFFF] ">
+      <header className="bg-[#142848] text-[#FFFFFF] ">
         <div className="flex justify-end py-1 container">
           <ul className="flex gap-x-[40px]">
             {upperNavList.map((item, index) => (
