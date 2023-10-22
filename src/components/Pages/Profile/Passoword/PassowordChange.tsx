@@ -36,7 +36,7 @@ const PasswordChange = () => {
         </div>
 
         <div className="flex justify-start pt-5">
-          <button className="bg-[#CD2027] text-white text-sm font-medium rounded-[5px] px-[50px] py-[13px]">
+          <button className="bg-[#ea4c89] text-white text-sm font-medium rounded-[5px] px-[50px] py-[13px]">
             Update Password
           </button>
         </div>

@@ -38,3 +38,12 @@ export interface InputWithLabelProps {
   errorMessage: string;
   getValue: (e: ChangeEvent<HTMLInputElement>) => void;
 }
+export interface CustomImageFieldWithLabelProps {
+  label: string;
+  required: boolean;
+  name?: string;
+  type?: string;
+  placeholder?: string;
+  errorMessage?: string;
+  getValue?: (e: ChangeEvent<HTMLInputElement>) => void;
+}

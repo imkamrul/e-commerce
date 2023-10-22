@@ -1,5 +1,13 @@
+import ProfileTitle from "../ProfileTitle";
+import ProductList from "./ProductList";
+
 const UserProducts = () => {
-  return <div>kjnvfkjdn</div>;
+  return (
+    <>
+      <ProfileTitle title="Manage all products" />
+      <ProductList />
+    </>
+  );
 };
 
 export default UserProducts;

@@ -1,6 +1,5 @@
 "use client";
 import { MyProfileTabList } from "@/components/Common/Constant/Constant";
-import UserCoupon from "@/components/Pages/Profile/Coupon/UserCoupon";
 import UserOrder from "@/components/Pages/Profile/Orders/UserOrder";
 import UserPasswordChange from "@/components/Pages/Profile/Passoword/PasswordChange";
 import UserProducts from "@/components/Pages/Profile/Products/UserProducts";
@@ -27,12 +26,8 @@ const Page = () => {
               <UserPasswordChange />
             </>
           )}
+
           {MyProfileTabList[2] === current && (
-            <>
-              <UserCoupon />
-            </>
-          )}
-          {MyProfileTabList[3] === current && (
             <>
               <UserProducts />
             </>

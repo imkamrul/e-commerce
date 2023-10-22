@@ -26,20 +26,20 @@ const Modal: React.FC<ModalProps> = ({
             customStyleClass ? customStyleClass : "lg:w-[520px] "
           }`}
         >
-          <div className="modalHeader flex py-5 xl:py-2 2xl:py-5 px-[30px] bg-gray-blue justify-between border-b border-[#E2E2E2]">
-            <h2 className="text-[20px] font-semibold font-rubik">{title}</h2>
-            {title !== "Confirm Name" && (
-              <button
-                className="bg-red inline-block w-7 h-7 text-center py-[0px] rounded-md cursor-pointer disabled:bg-gray-400"
-                onClick={toggleModal}
-                disabled={isLoading ? isLoading : false}
-              >
-                <CloseIcon className="!inline-block" />
-              </button>
-            )}
+          <div className="flex py-5 xl:py-2 2xl:py-5 px-[30px] bg-[#192D4D] justify-between border-b border-[#E2E2E2]">
+            <h2 className="text-[20px] font-semibold font-rubik text-white">
+              {title}
+            </h2>
+
+            <button
+              className="bg-[#ea4c89] inline-block w-7 h-7 text-center py-[0px] rounded-md cursor-pointer"
+              onClick={toggleModal}
+            >
+              <CloseIcon className="!inline-block" />
+            </button>
           </div>
 
-          <div className="modalBody p-[30px] bg-white">{children}</div>
+          <div className=" p-[30px] bg-white">{children}</div>
         </div>
       )}
     </>
