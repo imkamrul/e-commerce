@@ -1,10 +1,11 @@
 "use client";
 import { MyProfileTabList } from "@/components/Common/Constant/Constant";
-import UserPasswordChange from "@/components/Pages/Profile/PasswordChange";
-import PersonalInformation from "@/components/Pages/Profile/PersonalInformation";
-import UserInfo from "@/components/Pages/Profile/UserInfo";
-import UserOrder from "@/components/Pages/Profile/UserOrder";
-import UserProducts from "@/components/Pages/Profile/UserProducts";
+import UserCoupon from "@/components/Pages/Profile/Coupon/UserCoupon";
+import UserOrder from "@/components/Pages/Profile/Orders/UserOrder";
+import UserPasswordChange from "@/components/Pages/Profile/Passoword/PasswordChange";
+import UserProducts from "@/components/Pages/Profile/Products/UserProducts";
+import PersonalInformation from "@/components/Pages/Profile/Profile/PersonalInformation";
+import UserInfo from "@/components/Pages/Profile/Profile/UserInfo";
 import { useState } from "react";
 
 const Page = () => {
@@ -27,6 +28,11 @@ const Page = () => {
             </>
           )}
           {MyProfileTabList[2] === current && (
+            <>
+              <UserCoupon />
+            </>
+          )}
+          {MyProfileTabList[3] === current && (
             <>
               <UserProducts />
             </>

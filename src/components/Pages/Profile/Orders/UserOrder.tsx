@@ -1,5 +1,5 @@
+import ProfileTitle from "../ProfileTitle";
 import OrderList from "./OrderList";
-import ProfileTitle from "./ProfileTitle";
 
 const UserOrder = () => {
   return (

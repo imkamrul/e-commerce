@@ -1,5 +1,5 @@
+import ProfileTitle from "../ProfileTitle";
 import PasswordChange from "./PassowordChange";
-import ProfileTitle from "./ProfileTitle";
 
 const UserPasswordChange = () => {
   return (
